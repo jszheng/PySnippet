@@ -1,0 +1,325 @@
+Instance of MyButton. address 40297528:
+<
+    name _ListTree__visited={}
+    name _name=40297528
+    name _tclCommands=[]
+    name _w=.40297528
+    name children={}
+    name master=.
+    name tk=<tkapp object at 0x00000000026CCED0>
+    name widgetName=button
+
+....<Class MyButton: address 39280808:
+        name __doc__=<>
+        name __module__=<>
+
+........<Class ListTree: address 38271656:
+            name _ListTree__attrnames=<bound method MyButton.__attrnames of <__main__.MyButton object at 0x000000000266E438>>
+            name _ListTree__listclass=<bound method MyButton.__listclass of <__main__.MyButton object at 0x000000000266E438>>
+            name __dict__=<>
+            name __doc__=<>
+            name __module__=<>
+            name __str__=<>
+            name __weakref__=<>
+
+............<Class object: address 1438660272:
+                name __class__=<>
+                name __delattr__=<>
+                name __dir__=<>
+                name __doc__=<>
+                name __eq__=<>
+                name __format__=<>
+                name __ge__=<>
+                name __getattribute__=<>
+                name __gt__=<>
+                name __hash__=<>
+                name __init__=<>
+                name __le__=<>
+                name __lt__=<>
+                name __ne__=<>
+                name __new__=<>
+                name __reduce__=<>
+                name __reduce_ex__=<>
+                name __repr__=<>
+                name __setattr__=<>
+                name __sizeof__=<>
+                name __str__=<>
+                name __subclasshook__=<>
+............>
+........>
+
+........<Class Button: address 39249848:
+            name __doc__=<>
+            name __init__=<>
+            name __module__=<>
+            name flash=<bound method MyButton.flash of <__main__.MyButton object at 0x000000000266E438>>
+            name invoke=<bound method MyButton.invoke of <__main__.MyButton object at 0x000000000266E438>>
+            name tkButtonDown=<bound method MyButton.tkButtonDown of <__main__.MyButton object at 0x000000000266E438>>
+            name tkButtonEnter=<bound method MyButton.tkButtonEnter of <__main__.MyButton object at 0x000000000266E438>>
+            name tkButtonInvoke=<bound method MyButton.tkButtonInvoke of <__main__.MyButton object at 0x000000000266E438>>
+            name tkButtonLeave=<bound method MyButton.tkButtonLeave of <__main__.MyButton object at 0x000000000266E438>>
+            name tkButtonUp=<bound method MyButton.tkButtonUp of <__main__.MyButton object at 0x000000000266E438>>
+
+............<Class Widget: address 39248024:
+                name __doc__=<>
+                name __module__=<>
+
+................<Class BaseWidget: address 39069976:
+                    name __doc__=<>
+                    name __init__=<>
+                    name __module__=<>
+                    name _do=<bound method MyButton._do of <__main__.MyButton object at 0x000000000266E438>>
+                    name _setup=<bound method MyButton._setup of <__main__.MyButton object at 0x000000000266E438>>
+                    name destroy=<bound method MyButton.destroy of <__main__.MyButton object at 0x000000000266E438>>
+
+....................<Class Misc: address 39061768:
+                        name _Misc__winfo_getint=<bound method MyButton.__winfo_getint of <__main__.MyButton object at 0x000000000266E438>>
+                        name _Misc__winfo_parseitem=<bound method MyButton.__winfo_parseitem of <__main__.MyButton object at 0x000000000266E438>>
+                        name __dict__=<>
+                        name __doc__=<>
+                        name __getitem__=<>
+                        name __module__=<>
+                        name __setitem__=<>
+                        name __str__=<>
+                        name __weakref__=<>
+                        name _bind=<bound method MyButton._bind of <__main__.MyButton object at 0x000000000266E438>>
+                        name _configure=<bound method MyButton._configure of <__main__.MyButton object at 0x000000000266E438>>
+                        name _displayof=<bound method MyButton._displayof of <__main__.MyButton object at 0x000000000266E438>>
+                        name _getboolean=<bound method MyButton._getboolean of <__main__.MyButton object at 0x000000000266E438>>
+                        name _getconfigure=<bound method MyButton._getconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                        name _getconfigure1=<bound method MyButton._getconfigure1 of <__main__.MyButton object at 0x000000000266E438>>
+                        name _getdoubles=<bound method MyButton._getdoubles of <__main__.MyButton object at 0x000000000266E438>>
+                        name _getints=<bound method MyButton._getints of <__main__.MyButton object at 0x000000000266E438>>
+                        name _grid_configure=<bound method MyButton._grid_configure of <__main__.MyButton object at 0x000000000266E438>>
+                        name _gridconvvalue=<bound method MyButton._gridconvvalue of <__main__.MyButton object at 0x000000000266E438>>
+                        name _nametowidget=<bound method MyButton.nametowidget of <__main__.MyButton object at 0x000000000266E438>>
+                        name _noarg_=['_noarg_']
+                        name _options=<bound method MyButton._options of <__main__.MyButton object at 0x000000000266E438>>
+                        name _register=<bound method MyButton._register of <__main__.MyButton object at 0x000000000266E438>>
+                        name _report_exception=<bound method MyButton._report_exception of <__main__.MyButton object at 0x000000000266E438>>
+                        name _root=<bound method MyButton._root of <__main__.MyButton object at 0x000000000266E438>>
+                        name _subst_format=('%#', '%b', '%f', '%h', '%k', '%s', '%t', '%w', '%x', '%y', '%A', '%E', '%K', '%N', '%W', '%T', '%X', '%Y', '%D')
+                        name _subst_format_str=%# %b %f %h %k %s %t %w %x %y %A %E %K %N %W %T %X %Y %D
+                        name _substitute=<bound method MyButton._substitute of <__main__.MyButton object at 0x000000000266E438>>
+                        name _tclCommands=[]
+                        name _windowingsystem=win32
+                        name after=<bound method MyButton.after of <__main__.MyButton object at 0x000000000266E438>>
+                        name after_cancel=<bound method MyButton.after_cancel of <__main__.MyButton object at 0x000000000266E438>>
+                        name after_idle=<bound method MyButton.after_idle of <__main__.MyButton object at 0x000000000266E438>>
+                        name anchor=<bound method MyButton.grid_anchor of <__main__.MyButton object at 0x000000000266E438>>
+                        name bbox=<bound method MyButton.grid_bbox of <__main__.MyButton object at 0x000000000266E438>>
+                        name bell=<bound method MyButton.bell of <__main__.MyButton object at 0x000000000266E438>>
+                        name bind=<bound method MyButton.bind of <__main__.MyButton object at 0x000000000266E438>>
+                        name bind_all=<bound method MyButton.bind_all of <__main__.MyButton object at 0x000000000266E438>>
+                        name bind_class=<bound method MyButton.bind_class of <__main__.MyButton object at 0x000000000266E438>>
+                        name bindtags=<bound method MyButton.bindtags of <__main__.MyButton object at 0x000000000266E438>>
+                        name cget=<bound method MyButton.cget of <__main__.MyButton object at 0x000000000266E438>>
+                        name clipboard_append=<bound method MyButton.clipboard_append of <__main__.MyButton object at 0x000000000266E438>>
+                        name clipboard_clear=<bound method MyButton.clipboard_clear of <__main__.MyButton object at 0x000000000266E438>>
+                        name clipboard_get=<bound method MyButton.clipboard_get of <__main__.MyButton object at 0x000000000266E438>>
+                        name colormodel=<bound method MyButton.colormodel of <__main__.MyButton object at 0x000000000266E438>>
+                        name columnconfigure=<bound method MyButton.grid_columnconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                        name config=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                        name configure=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                        name deletecommand=<bound method MyButton.deletecommand of <__main__.MyButton object at 0x000000000266E438>>
+                        name destroy=<bound method MyButton.destroy of <__main__.MyButton object at 0x000000000266E438>>
+                        name event_add=<bound method MyButton.event_add of <__main__.MyButton object at 0x000000000266E438>>
+                        name event_delete=<bound method MyButton.event_delete of <__main__.MyButton object at 0x000000000266E438>>
+                        name event_generate=<bound method MyButton.event_generate of <__main__.MyButton object at 0x000000000266E438>>
+                        name event_info=<bound method MyButton.event_info of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus=<bound method MyButton.focus_set of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus_displayof=<bound method MyButton.focus_displayof of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus_force=<bound method MyButton.focus_force of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus_get=<bound method MyButton.focus_get of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus_lastfor=<bound method MyButton.focus_lastfor of <__main__.MyButton object at 0x000000000266E438>>
+                        name focus_set=<bound method MyButton.focus_set of <__main__.MyButton object at 0x000000000266E438>>
+                        name getboolean=<bound method MyButton.getboolean of <__main__.MyButton object at 0x000000000266E438>>
+                        name getdouble=<class 'float'>
+                        name getint=<class 'int'>
+                        name getvar=<bound method MyButton.getvar of <__main__.MyButton object at 0x000000000266E438>>
+                        name grab_current=<bound method MyButton.grab_current of <__main__.MyButton object at 0x000000000266E438>>
+                        name grab_release=<bound method MyButton.grab_release of <__main__.MyButton object at 0x000000000266E438>>
+                        name grab_set=<bound method MyButton.grab_set of <__main__.MyButton object at 0x000000000266E438>>
+                        name grab_set_global=<bound method MyButton.grab_set_global of <__main__.MyButton object at 0x000000000266E438>>
+                        name grab_status=<bound method MyButton.grab_status of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_anchor=<bound method MyButton.grid_anchor of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_bbox=<bound method MyButton.grid_bbox of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_columnconfigure=<bound method MyButton.grid_columnconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_location=<bound method MyButton.grid_location of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_propagate=<bound method MyButton.grid_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_rowconfigure=<bound method MyButton.grid_rowconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_size=<bound method MyButton.grid_size of <__main__.MyButton object at 0x000000000266E438>>
+                        name grid_slaves=<bound method MyButton.grid_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                        name image_names=<bound method MyButton.image_names of <__main__.MyButton object at 0x000000000266E438>>
+                        name image_types=<bound method MyButton.image_types of <__main__.MyButton object at 0x000000000266E438>>
+                        name keys=<bound method MyButton.keys of <__main__.MyButton object at 0x000000000266E438>>
+                        name lift=<bound method MyButton.tkraise of <__main__.MyButton object at 0x000000000266E438>>
+                        name lower=<bound method MyButton.lower of <__main__.MyButton object at 0x000000000266E438>>
+                        name mainloop=<bound method MyButton.mainloop of <__main__.MyButton object at 0x000000000266E438>>
+                        name nametowidget=<bound method MyButton.nametowidget of <__main__.MyButton object at 0x000000000266E438>>
+                        name option_add=<bound method MyButton.option_add of <__main__.MyButton object at 0x000000000266E438>>
+                        name option_clear=<bound method MyButton.option_clear of <__main__.MyButton object at 0x000000000266E438>>
+                        name option_get=<bound method MyButton.option_get of <__main__.MyButton object at 0x000000000266E438>>
+                        name option_readfile=<bound method MyButton.option_readfile of <__main__.MyButton object at 0x000000000266E438>>
+                        name pack_propagate=<bound method MyButton.pack_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                        name pack_slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                        name place_slaves=<bound method MyButton.place_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                        name propagate=<bound method MyButton.pack_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                        name quit=<bound method MyButton.quit of <__main__.MyButton object at 0x000000000266E438>>
+                        name register=<bound method MyButton._register of <__main__.MyButton object at 0x000000000266E438>>
+                        name rowconfigure=<bound method MyButton.grid_rowconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                        name selection_clear=<bound method MyButton.selection_clear of <__main__.MyButton object at 0x000000000266E438>>
+                        name selection_get=<bound method MyButton.selection_get of <__main__.MyButton object at 0x000000000266E438>>
+                        name selection_handle=<bound method MyButton.selection_handle of <__main__.MyButton object at 0x000000000266E438>>
+                        name selection_own=<bound method MyButton.selection_own of <__main__.MyButton object at 0x000000000266E438>>
+                        name selection_own_get=<bound method MyButton.selection_own_get of <__main__.MyButton object at 0x000000000266E438>>
+                        name send=<bound method MyButton.send of <__main__.MyButton object at 0x000000000266E438>>
+                        name setvar=<bound method MyButton.setvar of <__main__.MyButton object at 0x000000000266E438>>
+                        name size=<bound method MyButton.grid_size of <__main__.MyButton object at 0x000000000266E438>>
+                        name slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_bisque=<bound method MyButton.tk_bisque of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_focusFollowsMouse=<bound method MyButton.tk_focusFollowsMouse of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_focusNext=<bound method MyButton.tk_focusNext of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_focusPrev=<bound method MyButton.tk_focusPrev of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_menuBar=<bound method MyButton.tk_menuBar of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_setPalette=<bound method MyButton.tk_setPalette of <__main__.MyButton object at 0x000000000266E438>>
+                        name tk_strictMotif=<bound method MyButton.tk_strictMotif of <__main__.MyButton object at 0x000000000266E438>>
+                        name tkraise=<bound method MyButton.tkraise of <__main__.MyButton object at 0x000000000266E438>>
+                        name unbind=<bound method MyButton.unbind of <__main__.MyButton object at 0x000000000266E438>>
+                        name unbind_all=<bound method MyButton.unbind_all of <__main__.MyButton object at 0x000000000266E438>>
+                        name unbind_class=<bound method MyButton.unbind_class of <__main__.MyButton object at 0x000000000266E438>>
+                        name update=<bound method MyButton.update of <__main__.MyButton object at 0x000000000266E438>>
+                        name update_idletasks=<bound method MyButton.update_idletasks of <__main__.MyButton object at 0x000000000266E438>>
+                        name wait_variable=<bound method MyButton.wait_variable of <__main__.MyButton object at 0x000000000266E438>>
+                        name wait_visibility=<bound method MyButton.wait_visibility of <__main__.MyButton object at 0x000000000266E438>>
+                        name wait_window=<bound method MyButton.wait_window of <__main__.MyButton object at 0x000000000266E438>>
+                        name waitvar=<bound method MyButton.wait_variable of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_atom=<bound method MyButton.winfo_atom of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_atomname=<bound method MyButton.winfo_atomname of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_cells=<bound method MyButton.winfo_cells of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_children=<bound method MyButton.winfo_children of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_class=<bound method MyButton.winfo_class of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_colormapfull=<bound method MyButton.winfo_colormapfull of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_containing=<bound method MyButton.winfo_containing of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_depth=<bound method MyButton.winfo_depth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_exists=<bound method MyButton.winfo_exists of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_fpixels=<bound method MyButton.winfo_fpixels of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_geometry=<bound method MyButton.winfo_geometry of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_height=<bound method MyButton.winfo_height of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_id=<bound method MyButton.winfo_id of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_interps=<bound method MyButton.winfo_interps of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_ismapped=<bound method MyButton.winfo_ismapped of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_manager=<bound method MyButton.winfo_manager of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_name=<bound method MyButton.winfo_name of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_parent=<bound method MyButton.winfo_parent of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_pathname=<bound method MyButton.winfo_pathname of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_pixels=<bound method MyButton.winfo_pixels of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_pointerx=<bound method MyButton.winfo_pointerx of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_pointerxy=<bound method MyButton.winfo_pointerxy of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_pointery=<bound method MyButton.winfo_pointery of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_reqheight=<bound method MyButton.winfo_reqheight of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_reqwidth=<bound method MyButton.winfo_reqwidth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_rgb=<bound method MyButton.winfo_rgb of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_rootx=<bound method MyButton.winfo_rootx of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_rooty=<bound method MyButton.winfo_rooty of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screen=<bound method MyButton.winfo_screen of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screencells=<bound method MyButton.winfo_screencells of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screendepth=<bound method MyButton.winfo_screendepth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screenheight=<bound method MyButton.winfo_screenheight of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screenmmheight=<bound method MyButton.winfo_screenmmheight of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screenmmwidth=<bound method MyButton.winfo_screenmmwidth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screenvisual=<bound method MyButton.winfo_screenvisual of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_screenwidth=<bound method MyButton.winfo_screenwidth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_server=<bound method MyButton.winfo_server of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_toplevel=<bound method MyButton.winfo_toplevel of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_viewable=<bound method MyButton.winfo_viewable of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_visual=<bound method MyButton.winfo_visual of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_visualid=<bound method MyButton.winfo_visualid of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_visualsavailable=<bound method MyButton.winfo_visualsavailable of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_vrootheight=<bound method MyButton.winfo_vrootheight of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_vrootwidth=<bound method MyButton.winfo_vrootwidth of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_vrootx=<bound method MyButton.winfo_vrootx of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_vrooty=<bound method MyButton.winfo_vrooty of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_width=<bound method MyButton.winfo_width of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_x=<bound method MyButton.winfo_x of <__main__.MyButton object at 0x000000000266E438>>
+                        name winfo_y=<bound method MyButton.winfo_y of <__main__.MyButton object at 0x000000000266E438>>
+
+........................<Class object: address 1438660272: (see above)>
+....................>
+................>
+
+................<Class Pack: address 39067240:
+                    name __dict__=<>
+                    name __doc__=<>
+                    name __module__=<>
+                    name __weakref__=<>
+                    name config=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name configure=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name forget=<bound method MyButton.pack_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name info=<bound method MyButton.pack_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack=<bound method MyButton.pack_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack_configure=<bound method MyButton.pack_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack_forget=<bound method MyButton.pack_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack_info=<bound method MyButton.pack_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack_propagate=<bound method MyButton.pack_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                    name pack_slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                    name propagate=<bound method MyButton.pack_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                    name slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+
+....................<Class object: address 1438660272: (see above)>
+................>
+
+................<Class Place: address 39068152:
+                    name __dict__=<>
+                    name __doc__=<>
+                    name __module__=<>
+                    name __weakref__=<>
+                    name config=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name configure=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name forget=<bound method MyButton.pack_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name info=<bound method MyButton.pack_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name place=<bound method MyButton.place_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name place_configure=<bound method MyButton.place_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name place_forget=<bound method MyButton.place_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name place_info=<bound method MyButton.place_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name place_slaves=<bound method MyButton.place_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                    name slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+
+....................<Class object: address 1438660272: (see above)>
+................>
+
+................<Class Grid: address 39069064:
+                    name __dict__=<>
+                    name __doc__=<>
+                    name __module__=<>
+                    name __weakref__=<>
+                    name bbox=<bound method MyButton.grid_bbox of <__main__.MyButton object at 0x000000000266E438>>
+                    name columnconfigure=<bound method MyButton.grid_columnconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                    name config=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name configure=<bound method MyButton.configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name forget=<bound method MyButton.pack_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid=<bound method MyButton.grid_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_bbox=<bound method MyButton.grid_bbox of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_columnconfigure=<bound method MyButton.grid_columnconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_configure=<bound method MyButton.grid_configure of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_forget=<bound method MyButton.grid_forget of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_info=<bound method MyButton.grid_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_location=<bound method MyButton.grid_location of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_propagate=<bound method MyButton.grid_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_remove=<bound method MyButton.grid_remove of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_rowconfigure=<bound method MyButton.grid_rowconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_size=<bound method MyButton.grid_size of <__main__.MyButton object at 0x000000000266E438>>
+                    name grid_slaves=<bound method MyButton.grid_slaves of <__main__.MyButton object at 0x000000000266E438>>
+                    name info=<bound method MyButton.pack_info of <__main__.MyButton object at 0x000000000266E438>>
+                    name location=<bound method MyButton.grid_location of <__main__.MyButton object at 0x000000000266E438>>
+                    name propagate=<bound method MyButton.pack_propagate of <__main__.MyButton object at 0x000000000266E438>>
+                    name rowconfigure=<bound method MyButton.grid_rowconfigure of <__main__.MyButton object at 0x000000000266E438>>
+                    name size=<bound method MyButton.grid_size of <__main__.MyButton object at 0x000000000266E438>>
+                    name slaves=<bound method MyButton.pack_slaves of <__main__.MyButton object at 0x000000000266E438>>
+
+....................<Class object: address 1438660272: (see above)>
+................>
+............>
+........>
+....>
+>

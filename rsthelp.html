@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>reStructuredText简明教程</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="restructuredtext">
+<h1 class="title">reStructuredText简明教程</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">作者:</th><td class="field-body">刘斗 <a class="reference external" href="mailto:redfork&#64;gmail.com">redfork&#64;gmail.com</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Changelog:</dt>
+<dd><ul class="first last simple">
+<li>120228 Zoom.Quiet appended skills</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h1>段落</h1>
+<p>REST 是松散的文本结构，使用预定义的模式描述文章的结构。首先学习最基本的结构：段落。</p>
+<p>段落是被空行分割的文字片段，左侧必须对齐（没有空格，或者有相同多的空格）。</p>
+<blockquote>
+<p>缩进的段落被视为引文。</p>
+<blockquote>
+继续缩进……</blockquote>
+<p>恢复</p>
+</blockquote>
+<p>恢复</p>
+</div>
+<div class="section" id="id2">
+<h1>文字样式</h1>
+<p>最简单的样式是 <em>斜体</em> 和 <strong>粗体</strong>.</p>
+<blockquote>
+<ul class="simple">
+<li>*斜体*. 被*包围的文字是斜体</li>
+<li>**粗体**. 被**包围的文字是粗体</li>
+</ul>
+</blockquote>
+<p>注意: * 两侧必须留有空格, 英文标点符号. 输入法设置为英文标点, 并使用正确的英文标点规范 (逗号, 句号后留一个空格, 引号, 括号两侧留一个空格).</p>
+</div>
+<div class="section" id="id3">
+<h1>列表</h1>
+<p>有三种列表:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>顺序,</li>
+<li>公告牌,</li>
+<li>定义.</li>
+</ol>
+</blockquote>
+<p>列表前后, 以及条目之间必须有空行隔开. 列表下面可以插入任意的内容, 段落, 图片都可以, 只要他们的左侧和列表的第一个文字左对齐.</p>
+<div class="section" id="id4">
+<h2>顺序列表</h2>
+<pre class="literal-block">
+1. 第 **一** 条
+
+   段落
+
+#. 第二条
+
+   1. 小条
+
+#. 第三条
+</pre>
+<p>顺序列表 生成:</p>
+<blockquote>
+<ol class="arabic">
+<li><p class="first">第 <strong>一</strong> 条</p>
+<p>段落</p>
+</li>
+<li><p class="first">第二条</p>
+<ol class="arabic simple">
+<li>小条</li>
+</ol>
+</li>
+<li><p class="first">第三条</p>
+</li>
+</ol>
+</blockquote>
+<p>第二条开始后续的条目用 # 开头</p>
+</div>
+<div class="section" id="id5">
+<h2>顺序列表 - 序号</h2>
+<p>第一条的序号不必从 1 开始:</p>
+<pre class="literal-block">
+3. 第三条
+
+#. 第四条
+
+7. 重新设定序号
+
+#. 继续
+</pre>
+<p>顺序列表 - 序号 生成:</p>
+<blockquote>
+<ol class="arabic simple" start="3">
+<li>第三条</li>
+<li>第四条</li>
+</ol>
+<ol class="arabic simple" start="7">
+<li>重新设定序号</li>
+<li>继续</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="id6">
+<h2>顺序列表 - 符号样式</h2>
+<p>符号:</p>
+<pre class="literal-block">
+1. 数字
+
+a. 小写字母
+
+A. 大写字母
+
+i) 小写罗马数字
+
+(I) 大写罗马数字
+</pre>
+<p>顺序列表 - 符号样式 效果</p>
+<p>符号:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>数字</li>
+</ol>
+<ol class="loweralpha simple">
+<li>小写字母</li>
+</ol>
+<ol class="upperalpha simple">
+<li>大写字母</li>
+</ol>
+<ol class="lowerroman simple">
+<li>小写罗马数字</li>
+</ol>
+<ol class="upperroman simple">
+<li>大写罗马数字</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="id7">
+<h2>公告牌列表</h2>
+<p>和顺序列表相似, 使用 &quot;*&quot; &quot;+&quot; &quot;-&quot; 代替数字:</p>
+<pre class="literal-block">
+* 列表第一级
+
+  + 第二级
+
+    - 第三级
+
+  + 第二级的另一个项目
+</pre>
+<p>公告牌列表 生成:</p>
+<blockquote>
+<ul class="simple">
+<li>列表第一级<ul>
+<li>第二级<ul>
+<li>第三级</li>
+</ul>
+</li>
+<li>第二级的另一个项目</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id8">
+<h1>定义列表</h1>
+<p>或者叫名词解释更确切:</p>
+<pre class="literal-block">
+*鸡*
+  两条腿, 直立行走, 带翅膀, 有头冠的动物.
+
+*鸭*
+  鸡的崇拜者
+</pre>
+<p>定义列表生成:</p>
+<dl class="docutils">
+<dt><em>鸡</em></dt>
+<dd>两条腿, 直立行走, 带翅膀, 有头冠的动物.</dd>
+<dt><em>鸭</em></dt>
+<dd>鸡的崇拜者</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h1>嵌入程序代码</h1>
+<p>如果需要嵌入大段的程序代码(SQL, 业务逻辑设置, 配置文件等), 在段落末尾添加两个':'. 代码的左侧必须缩进, 代码引用到没有缩进的行为止. 例如:</p>
+<pre class="literal-block">
+如果数据库有问题, 执行下面的 SQL::
+
+ # Dumping data for table `item_table`
+
+ INSERT INTO item_table VALUES (
+   0000000001, 0, 'Manual', '', '0.18.0',
+   'This is the manual for Mantis version 0.18.0.\r\n\r\nThe Mantis manual is modeled after the [url=http://www.php.net/manual/en/]PHP Manual[/url]. It is authored via the \\&quot;manual\\&quot; module in Mantis CVS.  You can always view/download the latest version of this manual from [url=http://mantisbt.sourceforge.net/manual/]here[/url].',
+   '', 1, 1, 20030811192655);
+</pre>
+<p>嵌入程序代码生成:</p>
+<p>如果数据库有问题, 执行下面的 SQL:</p>
+<pre class="literal-block">
+# Dumping data for table `item_table`
+INSERT INTO item_table VALUES (
+  0000000001, 0, 'Manual', '', '0.18.0',
+  'This is the manual for Mantis version 0.18.0.\r\n\r\nThe Mantis manual is modeled after the [url=http://www.php.net/manual/en/]PHP Manual[/url]. It is authored via the \\&quot;manual\\&quot; module in Mantis CVS.  You can always view/download the latest version of this manual from [url=http://mantisbt.sourceforge.net/manual/]here[/url].',
+  '', 1, 1, 20030811192655);
+</pre>
+<div class="section" id="id10">
+<h2>嵌入程序代码 续</h2>
+<p>如果没有合适的段落添加 ::, 也可以在一个空行上添加, 这个双冒号行被忽略:</p>
+<pre class="literal-block">
+::
+
+#
+# Dumping data for table `item_table`
+#
+
+INSERT INTO item_table VALUES (
+  0000000001, 0, 'Manual', '', '0.18.0',
+  'This is the manual for Mantis version 0.18.0.\r\n\r\nThe Mantis manual is modeled after the [url=http://www.php.net/manual/en/]PHP Manual[/url]. It is authored via the \\&quot;manual\\&quot; module in Mantis CVS.  You can always view/download the latest version of this manual from [url=http://mantisbt.sourceforge.net/manual/]here[/url].',
+  '', 1, 1, 20030811192655);
+</pre>
+<p>嵌入程序代码 续 生成:</p>
+<pre class="literal-block">
+#
+# Dumping data for table `item_table`
+#
+
+INSERT INTO item_table VALUES (
+  0000000001, 0, 'Manual', '', '0.18.0',
+  'This is the manual for Mantis version 0.18.0.\r\n\r\nThe Mantis manual is modeled after the [url=http://www.php.net/manual/en/]PHP Manual[/url]. It is authored via the \\&quot;manual\\&quot; module in Mantis CVS.  You can always view/download the latest version of this manual from [url=http://mantisbt.sourceforge.net/manual/]here[/url].',
+  '', 1, 1, 20030811192655);
+</pre>
+</div>
+<div class="section" id="id11">
+<h2>程序引用体例</h2>
+<p>可以 用 <cite>.. code-block::</cite> 追加各种语法高亮声明:</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    def foo():
+        print &quot;Love Python, Love FreeDome&quot;
+        print &quot;E文标点,.0123456789,中文标点,. &quot;
+</pre>
+<p>效果:</p>
+<pre class="code python literal-block">
+<span class="keyword">def</span> <span class="name function">foo</span><span class="punctuation">():</span>
+    <span class="keyword">print</span> <span class="literal string">&quot;Love Python, Love FreeDome&quot;</span>
+    <span class="keyword">print</span> <span class="literal string">&quot;E文标点,.0123456789,中文标点,. &quot;</span>
+</pre>
+<p>外部包含:</p>
+<pre class="literal-block">
+.. include:: example.py
+    :code: python
+</pre>
+<p>效果:</p>
+<pre class="code python literal-block">
+<span class="keyword">def</span> <span class="name function">foo</span><span class="punctuation">():</span>
+    <span class="keyword">print</span> <span class="literal string">&quot;Love Python, Love FreeDome&quot;</span>
+    <span class="keyword">print</span> <span class="literal string">&quot;E文标点,.0123456789,中文标点,. &quot;</span>
+</pre>
+</div>
+</div>
+<div class="section" id="id12">
+<h1>章节</h1>
+<p>章节是文章的主体结构, 分为 <strong>标题 章 节 小节</strong> 等. 定义章节的方式是在行的下面添加 '=======', 比如:</p>
+<pre class="literal-block">
+标题
+====
+
+章
+--
+
+节
+~~
+
+小节
+####
+</pre>
+<p>说明 <a class="footnote-reference" href="#id14" id="id13">[1]</a>:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>'====' 至少和文字行一样长, 更长也行</li>
+<li>相同级别必须使用统一的符号, 否则会被识别为更小的级别</li>
+<li>= - ~ ` : ' &quot; ^ _ * _ # &lt; &gt;
+这些符号都可以, 级别足够多了.</li>
+</ol>
+</blockquote>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[1]</a></td><td>由于幻灯片系统的限制, 效果无法在幻灯片内演示</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h1>标题</h1>
+<p>标题和章节在结构上的作用相同, 但是可能有不同的显示格式. 标题的区别是在章节的上方也加上 '====' 行:</p>
+<pre class="literal-block">
+====
+标题
+====
+
+-----------
+第一章 概述
+-----------
+</pre>
+</div>
+<div class="section" id="id16">
+<h1>表格</h1>
+<div class="section" id="id17">
+<h2>普通表格</h2>
+<pre class="literal-block">
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
+</pre>
+<p>普通表格 生成:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="id18">
+<h2>简单表格</h2>
+<p><em>注意:</em> 表格包含中文时,基本无法对齐,,,</p>
+<pre class="literal-block">
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+</pre>
+<p>简单表格  生成:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="csv">
+<h2>CSV 表格</h2>
+<pre class="literal-block">
+.. csv-table:: Frozen Delights!
+ :header: &quot;Treat&quot;, &quot;Quantity&quot;, &quot;Description&quot;
+ :widths: 15, 10, 30
+
+ &quot;Albatross&quot;, 2.99, &quot;On a stick!&quot;
+ &quot;Crunchy Frog&quot;, 1.49, &quot;If we took the bones out, it wouldn't be
+ crunchy, now would it?&quot;
+ &quot;Gannet Ripple&quot;, 1.99, &quot;On a stick!&quot;
+</pre>
+<p>CSV 表格生成:</p>
+<table border="1" class="docutils">
+<caption>Frozen Delights!</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn't be
+crunchy, now would it?</td>
+</tr>
+<tr><td>Gannet Ripple</td>
+<td>1.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id19">
+<h2>列表表格</h2>
+<pre class="literal-block">
+.. list-table:: Frozen Delights!
+  :widths: 15 10 30
+  :header-rows: 1
+
+  * - Treat
+    - Quantity
+    - Description
+  * - Albatross
+    - 2.99
+    - On a stick!
+  * - Crunchy Frog
+    - 1.49
+    - If we took the bones out, it wouldn't be
+      crunchy, now would it?
+  * - Gannet Ripple
+    - 1.99
+    - On a stick!
+</pre>
+<p>列表表格 生成:</p>
+<table border="1" class="docutils">
+<caption>Frozen Delights!</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn't be
+crunchy, now would it?</td>
+</tr>
+<tr><td>Gannet Ripple</td>
+<td>1.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="rst">
+<h1>rST排版技巧</h1>
+<div class="section" id="id20">
+<h2>跨章节指引</h2>
+<ul>
+<li><p class="first">行文中,经常要对其它章节进行指引,在 html 中对应的就是 锚点链接</p>
+</li>
+<li><dl class="first docutils">
+<dt>rST 中提供了非常优雅的解决:</dt>
+<dd><ul class="first last simple">
+<li>使用通用元素定义</li>
+<li>比如説:</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<pre class="literal-block">
+各个章节的首页一般是 index.rst
+头一行,习惯性加个聲明:
+.. _chapter6index:
+
+那么,在其它任意文本中,随时可以使用:
+:ref:`构建 buzz &lt;chapter6index&gt;`
+来生成一个指向第二章 首页的链接!
+</pre>
+</div>
+<div class="section" id="id21">
+<h2>插图/表格指代</h2>
+<ul>
+<li><p class="first">行文中,经常对指定插图/表格 进行指代</p>
+</li>
+<li><dl class="first docutils">
+<dt>rST 中提供了非常优雅的解决:</dt>
+<dd><ul class="first last simple">
+<li>进行通用元素定义</li>
+<li>比如说</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<pre class="literal-block">
+.. _fig_0601:
+.. figure:: _static/figs/magic-2.png
+
+   插图 6-1 神奇的2
+</pre>
+<p>然后,就可以在任意地方使用 <cite>fig_0601_</cite> 来指代,
+实际输出的就是 &quot;插图 6-1 神奇的2&quot;</p>
+<div class="figure" id="fig-0601">
+<img alt="_static/figs/magic-2.png" src="_static/figs/magic-2.png" />
+<p class="caption">插图 6-1 神奇的2</p>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>上下标号</h2>
+<p>有时要进行数学/化学的表示,在 html 中就需要上/下标( <cite>&lt;sub&gt;</cite> , <cite>&lt;sup&gt;</cite>) 的表达,
+rST 中当然也有:</p>
+<pre class="literal-block">
+H\ :sub:`2`\ O
+E = mc\ :sup:`2`
+</pre>
+<p>效果:</p>
+<p>H<sub>2</sub>O</p>
+<p>E = mc<sup>2</sup></p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>注意:</p>
+<p class="last">这里的 只是为了制造语法空间,输出时,是没有空格的了,,,</p>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h1>段落层次约定</h1>
+<p>使用 <cite>reSTsections_</cite></p>
+<pre class="literal-block">
+共分4级
+=======================
+大标题
+=======================
+
+
+-----------------------
+小标题
+-----------------------
+
+
+^^^^^^^^^^^^^^^^^^^^^^^
+二级标题
+^^^^^^^^^^^^^^^^^^^^^^^
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+三级标题
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+</pre>
+<p>再小，就使用列表!:</p>
+<blockquote>
+<ul class="simple">
+<li>列表项目1</li>
+<li>列表项目2</li>
+<li>...</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id24">
+<h1>推荐文章</h1>
+<ul class="simple">
+<li><a class="reference external" href="http://www.worldhello.net/gotgithub/appendix/markups.html">轻量级标记语言</a></li>
+</ul>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+青花瓷软件(北京)有限公司 - 2010/02/26
+</div>
+</body>
+</html>
