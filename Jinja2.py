@@ -1,3 +1,9 @@
+"""
+{% ... %} for Statements
+{{ ... }} for Expressions to print to the template output
+{# ... #} for Comments not included in the template output
+#  ... ## for Line Statements
+"""
 from jinja2 import Template, Environment, FileSystemLoader
 
 string = """\
