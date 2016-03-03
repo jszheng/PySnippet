@@ -128,7 +128,10 @@ with open(xmlfile, 'rt') as f:
     #    print(node.tag)
 
     root = tree.getroot()
-    # print(root.tag)
+    print(root.tag)
+    print(root.attrib)
+    # Not work since reader has expend the namespace.
+    print(tree.find('spirit:vendor'))
     # print(root.attrib)
     # for child in root:
     #     print(child.tag, child.attrib)
@@ -158,9 +161,13 @@ with open(xmlfile, 'rt') as f:
             width = width_node.text
         else:
             width = '#'
-
-
         print(name, direction, width, description)
 
-    for param in tree.iter('parameters'):
-        
+    print("################################################")
+
+    for param in tree.iter('parameter'):
+        name = param.find('name').text
+        short_desc = param.find('displayName').text
+        desc = param.find('description').text
+        needed = param.find('onMaster/presence').text
+        print(name, '|', needed, '|', short_desc, '|', desc)
