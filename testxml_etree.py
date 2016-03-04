@@ -160,8 +160,13 @@ with open(xmlfile, 'rt') as f:
         if width_node is not None:
             width = width_node.text
         else:
-            width = '#'
-        print(name, direction, width, description)
+            width = '"#"'
+        #print(name, direction, width, description)
+        if direction == 'in':
+            d = 's'
+        else:
+            d = 'm'
+        print(name.lower(), '=', 'HdSignal("'+name+'", ', width+", '"+d+"', '"+description+"')" )
 
     print("################################################")
 

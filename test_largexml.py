@@ -29,6 +29,7 @@ def parse_and_remove(filename, path):
 class XMLNamespaces:
     def __init__(self, **kwargs):
         self.namespaces = {}
+        self.reverse_table = {}
         for name, uri in kwargs.items():
             self.register(name, uri)
 
