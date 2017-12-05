@@ -39,14 +39,17 @@ for path, dirs, files in os.walk('.'):
                 path_seg.append(segment)
                 if segment == 'include':  # this is an include path, stop here.
                     break
-            include_path.add(os.path.join(*path_seg))
+            if len(path_seg) == 0:
+                include_path.add(path)
+            else:
+                include_path.add(os.path.join(*path_seg))
             continue
 
 print('INCLUDEPATH +=', ' \\\n'.join(sorted(include_path)))
 print()
 
-print('HEADERS +=', '\\\n'.join(headers))
+print('HEADERS +=', ' \\\n'.join(headers))
 print()
 
-print('SOURCES +=', '\\\n'.join(sources))
+print('SOURCES +=', ' \\\n'.join(sources))
 print()
