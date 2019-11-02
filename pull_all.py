@@ -41,7 +41,8 @@ def walk(top, onerror=None, followlinks=False):
         print("[SVN]", top)
         return
     else:
-        print("[PASS]", top)
+        pass
+        #print("[PASS]", top)
     ############################################
 
     # Recurse into sub-directories
