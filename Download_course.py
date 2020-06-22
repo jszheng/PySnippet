@@ -19,7 +19,6 @@ videos = []
 with urllib.request.urlopen(url) as f:
     data = f.read().decode('utf-8')
     soup = BeautifulSoup(data, 'lxml')
-    #print(soup.prettify())
     for a in soup.find_all('a'):
         link = a['href']
         print(link)
