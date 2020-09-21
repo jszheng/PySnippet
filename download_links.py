@@ -39,7 +39,7 @@ if options.exclude is None:
 # print('VERBOSE : ', options.verbose)
 # print('REST    : ', remainder)
 
-r_http_start = re.compile(r'^http://')
+r_http_start = re.compile(r'^http[s]?://')
 ignore_link = []
 for url in remainder:
     print("process ", url, "......")
