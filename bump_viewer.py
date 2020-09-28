@@ -100,7 +100,7 @@ class FilterWindow(QDialog):
         mainLayout.addLayout(hLayout)
         self.setLayout(mainLayout)
         self.setWindowTitle("Bump Draw")
-        self.resize(700, 800)
+        self.setGeometry(0, 0, 500, 800)
 
         # Connect Actions
         self.browseButton.clicked.connect(self.browse)
@@ -116,9 +116,16 @@ class FilterWindow(QDialog):
 
         # Datas
         self.bump_df = None
+        self.bump_x = None
+        self.bump_y = None
+        self.bump_names = None
+
         self.tester_df = None
 
         self.currentDir = QDir.currentPath()
+
+        # Draw Graph
+        self.graph = None
 
     def createComboBox(self, text=""):
         comboBox = QComboBox()
@@ -151,6 +158,24 @@ class FilterWindow(QDialog):
         for c in columns:
             self.colComboBox.addItem(c)
         self.colComboBox.setCurrentIndex(3)
+        self.bump_x = self.bump_df['BumpX\n(Tester View)'].values.tolist()
+        self.bump_y = self.bump_df['BumpY\n(Tester View)'].values.tolist()
+        names = self.bump_df['Bump Name'].values.tolist()
+        # expand array [n] to _n style to match with tester report
+        name = []
+        name_cnt = dict()
+        ary_pat = re.compile(r'\[(\d+)\]')
+        for n in names:
+            new = ary_pat.sub(r'_\1', n)
+            name.append(new)
+            if new in name_cnt:
+                name_cnt[new] += 1
+            else:
+                name_cnt[new] = 1
+        self.bump_names = name
+        for key, value in name_cnt.items():
+            if value > 1:
+                print(key, "\t\t\t", value)
         print("Done!")
 
     def filter_bump(self):
@@ -168,10 +193,12 @@ class FilterWindow(QDialog):
         colData = self.bump_df[colName].values.tolist()
         try:  # do not exit program when input regular express failed compilation
             r = re.compile(filterStr)
-        except:
+        except Exception as e:
+            print(e)
             return
         data_list = list(filter(r.match, colData))
         print("found", len(data_list), "data")
+        self.filterComboBox.addItem(filterStr)
 
         # print(df_filtered)
         # print(len(data_list))
@@ -208,17 +235,19 @@ class FilterWindow(QDialog):
         colName = self.tcolComboBox.currentText()
         filterStr = self.tfilterComboBox.currentText()
         colData = self.tester_df[colName].values.tolist()
-        print(colName)
-        print(filterStr)
-        print(colData)
+        # print(colName)
+        # print(filterStr)
+        # print(colData)
         try:  # do not exit program when input regular express failed compilation
             r = re.compile(filterStr)
-        except:
+        except Exception as e:
+            print(e)
             return
         data_list = list(filter(r.match, colData))
-        print(data_list)
-        print(len(data_list))
-        print("found", len(data_list), "data")
+        # print(data_list)
+        # print(len(data_list))
+        # print("found", len(data_list), "data")
+        self.tfilterComboBox.addItem(filterStr)
 
         self.testerList.clear()
         self.testerList.addItems(data_list)
@@ -231,16 +260,84 @@ class FilterWindow(QDialog):
             self.colorLabel.setAutoFillBackground(True)
 
     def drawOriginal(self):
-        print("TODO: Draw Original Pin Location")
-        pass
+        print("Draw Original Pin Location")
+        if self.graph is None:
+            self.graph = BumpViewWindows()
+            self.graph.show()
+        # Get Data
+        if self.bump_df is None:
+            return
+        colName = self.colComboBox.currentText()
+        filterStr = self.filterComboBox.currentText()
+        if colName == "":
+            return
+        if filterStr == "":
+            filterStr = ".*"
+        color = self.colorLabel.text()
+        print(color)
+        if color == "":
+            color = 'b'
+        try:  # do not exit program when input regular express failed compilation
+            df_filtered = self.bump_df[self.bump_df[colName].str.match(filterStr) == True]
+            x = df_filtered['BumpX\n(Tester View)'].values.tolist()
+            y = df_filtered['BumpY\n(Tester View)'].values.tolist()
+            self.graph.scatter(y, x, c=color)
+        except Exception as e:
+            print(e)
+            return
 
     def drawTester(self):
         print("TODO : Draw Tester Report")
-        pass
+        if self.graph is None:
+            self.graph = BumpViewWindows()
+            self.graph.show()
+        if self.bump_df is None:
+            return
+        if self.tester_df is None:
+            return
+        if self.bump_x is None:
+            return
+        colName = self.tcolComboBox.currentText()
+        filterStr = self.tfilterComboBox.currentText()
+        print(colName)
+        print(filterStr)
+        if colName == "":
+            return
+        if filterStr == "":
+            filterStr = ".*"
+        color = self.colorLabel.text()
+        print(color)
+        if color == "":
+            color = 'b'
+        try:  # do not exit program when input regular express failed compilation
+            df_filtered = self.tester_df[self.tester_df[colName].str.match(filterStr) == True]
+            failedNames = df_filtered['Pin'].values.tolist()
+            print("Found", len(failedNames))
+            print(failedNames)
+            x = []
+            y = []
+            for name in failedNames:
+                #print("process", name)
+                if name in self.bump_names:
+                    index = self.bump_names.index(name)
+                    x.append(self.bump_x[index])
+                    y.append(self.bump_y[index])
+                    #print("FOUND", name, x, y)
+                else:
+                    print(name, "not in the BI bump list, please check!")
+            self.graph.scatter(y, x, c=color)
+        except Exception as e:
+            print(e)
+            return
 
     def clear_draw(self):
-        print("TODO: clear current draw screen")
+        if self.graph is None:
+            self.graph = BumpViewWindows()
+            self.graph.show()
+        self.graph.clear()
         pass
+
+    # TODO: double click to highlight one signal
 
 
 class ZoomPan:
@@ -336,40 +433,43 @@ class BumpViewWindows(QDialog):
         self.hlayout = QHBoxLayout()
         self.hlayout.addWidget(self.canvas)
         self.setLayout(self.hlayout)
-        self.plot()
+        self.init_plot()
 
-    def plot(self):
+    def init_plot(self):
+        ax = self.fig.add_subplot(111)
+        ax.cla()
+        scale = 1.1
+        zp = ZoomPan()
+        figZoom = zp.zoom_factory(ax, base_scale=scale)
+        figPan = zp.pan_factory(ax)
+
+        ax.set_aspect('equal')
+        ax.set_title("BI Bump Map")
+        ax.set_xlabel("Y")
+        ax.set_ylabel("X")
+
+        self.ax = ax
+        self.canvas.draw()
+
+    def scatter(self, x, y, c='b', marker='o'):
         try:
-            ax = self.fig.add_subplot(111)
-            #ax.scatter([0], [0], 'r')
-            #x = np.linspace(0, 100, 100)
-            #y = np.random.random(100)
-            ax.cla()
-            ax.set_aspect('equal')
-            ax.set_title("BI Bump Map")
-            ax.set_xlabel("Y")
-            ax.set_ylabel("X")
-            scale = 1.1
-            zp = ZoomPan()
-            figZoom = zp.zoom_factory(ax, base_scale=scale)
-            figPan = zp.pan_factory(ax)
-            #ax.plot(x, y)
-            import pickle
-            with open('bump_info.dat', 'rb') as pk:
-                sig_x, sig_y, scan_x, scan_y, vdd_x, vdd_y, vss_x, vss_y = pickle.load(pk)
-
-            print('VDD     ', len(vdd_x), len(vdd_y))
-            print('VSS     ', len(vss_x), len(vss_y))
-            print('scan    ', len(scan_x), len(scan_y))
-            print('Signals ', len(sig_x), len(sig_y))
-
-            ax.scatter(sig_y, sig_x)
-            ax.scatter(scan_y, scan_x, c='g')
-            ax.scatter(vdd_y, vdd_x, c='#200000')
-            ax.scatter(vss_y, vss_x, c='#d0d0d0')
-            ax.scatter(vss_y, vss_x, c='#d0d0d0')
-
+            ax = self.ax
+            ax.scatter(x, y, c=c, marker=marker)
             self.canvas.draw()
+        except Exception as e:
+            print(e)
+
+    def set_aspect(self, aspect):
+        try:
+            ax = self.ax
+            ax.set_aspect(aspect)
+        except Exception as e:
+            print(e)
+
+    def clear(self):
+        try:
+            ax = self.ax
+            ax.cla()
         except Exception as e:
             print(e)
 
@@ -378,6 +478,6 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     fw = FilterWindow()
     fw.show()
-    bv = BumpViewWindows()
-    bv.show()
+    # bv = BumpViewWindows()
+    # bv.show()
     sys.exit(app.exec_())

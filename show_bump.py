@@ -52,6 +52,7 @@ ax.set_title("BI Bump Map")
 ax.set_xlabel("Y")
 ax.set_ylabel("X")
 
+
 # base on
 # https://stackoverflow.com/questions/11551049/matplotlib-plot-zooming-with-scroll-wheel
 def zoom_factory(ax, base_scale=2.):
@@ -217,9 +218,9 @@ ax.scatter(vss_y, vss_x, c='#e0e0e0')
 ax.scatter(scan_y, scan_x, c='g')
 ax.scatter(sig_y, sig_x)
 
-
 # Mark Failed
 from parse_log import *
+
 testfile = tester_rpt('/home/jszheng/Downloads/log_0920_x0y0_new_IO.txt')
 hx = []
 hy = []
