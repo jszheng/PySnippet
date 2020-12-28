@@ -49,7 +49,11 @@ for url in remainder:
         soup = BeautifulSoup(data, 'lxml')
         # print(soup.prettify())
         for a in soup.find_all('a'):
-            link = a['href']
+            print(a)
+            try:
+                link = a['href']
+            except:
+                continue
 
             # include filter
             flag = False
@@ -84,4 +88,6 @@ for url in remainder:
             print(l)
         else:
             print(os.path.join(root, l))
+    print("-------------------------")
+    
     print('Done!\n')
